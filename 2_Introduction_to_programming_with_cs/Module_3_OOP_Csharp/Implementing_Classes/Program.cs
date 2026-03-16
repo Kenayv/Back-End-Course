@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 class Person
 {
-    public string name;
-    public int age;
+    public string Name;
+    public int Age;
 
-    public void greet()
+    public void Greet()
     {
-        Console.WriteLine("hejka " + name);
+        Console.WriteLine("hejka " + Name);
     }
 }
 
@@ -18,9 +18,9 @@ class Program
     {
             Person person = new Person();
 
-            person.age = 19;
-            person.name = "name";
+            person.Age = 19;
+            person.Name = "name";
 
-            person.greet();
+            person.Greet();
     }
 }
