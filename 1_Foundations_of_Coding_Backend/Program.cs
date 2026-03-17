@@ -4,7 +4,8 @@
 /*
 Simple console application that allows the user to manage an inventory of products.
 
-This is a submission project for the course "Foundations of Coding" on the Codecademy platform. 
+This is a submission project for the course "Foundations of Coding" on the Coursera platform. 
+Course certificate link: https://coursera.org/share/cb3020927206d1ad88656c1560be4efd
 
 Constraints and grading criteria:
 
