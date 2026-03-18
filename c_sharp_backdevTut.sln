@@ -4,9 +4,9 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Introduction_to_programming_with_cs", "2_Introduction_to_programming_with_cs", "{79B2080E-7F4D-2E8E-93CC-96CD42EB398C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_helloWorld", "2_Introduction_to_programming_with_cs\1_helloWorld\1_helloWorld.csproj", "{913BAE98-C484-9FAE-AEEA-27ACB3C882A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Introduction_To_backEnd", "1_Introduction_To_backEnd\1_Introduction_To_backEnd.csproj", "{913BAE98-C484-9FAE-AEEA-27ACB3C882A9}"
 EndProject
-Global
+GlobalGlobal
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
