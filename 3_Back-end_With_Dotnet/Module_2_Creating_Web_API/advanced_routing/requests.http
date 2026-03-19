@@ -1,0 +1,26 @@
+GET http://localhost:5023/users/1/posts/hee-hee
+
+###
+
+GET http://localhost:5023/products/12
+
+###
+
+GET http://localhost:5023/report
+
+###
+
+GET http://localhost:5023/report/2015
+
+
+###
+
+GET http://localhost:5023/files/skibidi/file/path/test.txt
+
+###
+
+GET http://localhost:5023/search?q=dotnet&page=3
+
+###
+
+GET http://localhost:5023/store/electronics/123/sale?inStock=true

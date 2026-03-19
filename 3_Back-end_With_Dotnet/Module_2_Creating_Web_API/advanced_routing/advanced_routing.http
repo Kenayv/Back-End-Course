@@ -1,0 +1,6 @@
+@advanced_routing_HostAddress = http://localhost:5023
+
+GET {{advanced_routing_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
