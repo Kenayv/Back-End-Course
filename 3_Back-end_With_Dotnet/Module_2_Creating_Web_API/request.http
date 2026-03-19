@@ -1,0 +1,13 @@
+GET http://localhost:5209/WeatherForecast
+
+###
+
+PUT http://localhost:5209/
+
+###
+
+DELETE http://localhost:5209/
+
+###
+
+POST http://localhost:5209/
