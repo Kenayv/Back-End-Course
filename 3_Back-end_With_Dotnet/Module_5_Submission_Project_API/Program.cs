@@ -8,7 +8,6 @@ builder.Services.AddHttpLogging(logging =>
     logging.RequestBodyLogLimit = 4096;
     logging.ResponseBodyLogLimit = 4096;
 });
-builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -58,7 +57,6 @@ app.Use(
 );
 
 app.UseHttpLogging();
-app.UseAuthorization();
 app.MapControllers();
 app.Map("/", () => "Simple API");
 
