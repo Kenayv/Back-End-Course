@@ -1,33 +1,51 @@
 GET http://localhost:5167
+Authorization: secret-token
+
+###
+GET http://localhost:5167
+Authorization: Bad-token-but-its-default-page
 
 ###
 
 GET http://localhost:5167/api/User/all
+Authorization: secret-token
+
+###
+
+GET http://localhost:5167/api/User/all
+Authorization: Bad-token
 
 ###
 
 GET http://localhost:5167/api/User/1
-
+Authorization: secret-token
 ###
 
 GET http://localhost:5167/api/User/TESTaaaa
+Authorization: secret-token
 
 ###
 
 POST http://localhost:5167/api/User/test/Hehe@gmail.com
+Authorization: secret-token
 
 ###
 
 POST http://localhost:5167/api/User/test/bad_email
+Authorization: secret-token
 
 ###
 
 PUT  http://localhost:5167/api/User/1/NewName
+Authorization: secret-token
+
 
 ###
 
 PUT  http://localhost:5167/api/User/9999/NewName
+Authorization: secret-token
 
 ###
 
 DELETE http://localhost:5167/api/User/3
+Authorization: secret-token
