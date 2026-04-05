@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -12,48 +13,58 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public ActionResult GetUser(int id)
+    public async Task<ActionResult> GetUser(int id)
     {
-        var user = _db.GetUser(id);
+        var user = await _db.GetUserByIdAsync(id);
 
         if (user == null)
-        {
             return NotFound();
-        }
+
         return Ok(user);
     }
 
-    [HttpPost("{name}")]
-    public ActionResult AddUser(string name)
+    [HttpGet("all")]
+    public async Task<ActionResult> GetAllUsers(int id)
     {
-        var user = _db.AddUser(name);
+        var allUsers = await _db.GetAllUsersAsync();
+        return Ok(JsonSerializer.Serialize(allUsers));
+    }
 
-        if (user == null)
+    [HttpPost("{name}/{email}")]
+    public async Task<ActionResult> AddUser(string name, string email)
+    {
+        try
         {
-            return BadRequest();
+            var user = await _db.AddUserAsync(name, email);
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
-        return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+        catch (ArgumentException e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (InvalidOperationException e)
+        {
+            return Conflict(e.Message);
+        }
     }
 
     [HttpPut("{id}/{name}")]
-    public ActionResult UpdateUser(int id, string name)
+    public async Task<ActionResult> UpdateUserName(int id, string name)
     {
-        var updatedUser = _db.UpdateUser(id, name);
+        var updatedUser = await _db.UpdateUserNameAsync(id, name);
 
         if (updatedUser == null)
-        {
             return NotFound();
-        }
+
         return Ok(updatedUser);
     }
 
     [HttpDelete("{id}")]
-    public ActionResult RemoveUser(int id)
+    public async Task<ActionResult> RemoveUser(int id)
     {
-        if (!_db.RemoveUser(id))
-        {
+        if (!await _db.RemoveUserAsync(id))
             return NotFound();
-        }
+
         return NoContent();
     }
 }

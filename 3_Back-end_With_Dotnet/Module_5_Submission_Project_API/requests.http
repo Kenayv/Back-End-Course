@@ -1,0 +1,33 @@
+GET http://localhost:5167
+
+###
+
+GET http://localhost:5167/api/User/all
+
+###
+
+GET http://localhost:5167/api/User/1
+
+###
+
+GET http://localhost:5167/api/User/TESTaaaa
+
+###
+
+POST http://localhost:5167/api/User/test/Hehe@gmail.com
+
+###
+
+POST http://localhost:5167/api/User/test/bad_email
+
+###
+
+PUT  http://localhost:5167/api/User/1/NewName
+
+###
+
+PUT  http://localhost:5167/api/User/9999/NewName
+
+###
+
+DELETE http://localhost:5167/api/User/3
