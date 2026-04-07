@@ -1,3 +1,9 @@
+
+Queries for the first lab of the module. Creating a simple database using MySql
+
+
+
+
 Step 2: Configure the Database
 
     CREATE DATABASE CompanyDB;
