@@ -1,0 +1,23 @@
+Step 2: Configure the Database
+
+    CREATE DATABASE CompanyDB;
+    USE CompanyDB;
+
+    CREATE TABLE Employees (
+        EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+        FirstName VARCHAR(50),
+        LastName VARCHAR(50),
+        Department VARCHAR(50)
+    );
+
+Step 3: Configure User Accounts and Permissions
+
+    CREATE USER 'manager'@'localhost' IDENTIFIED BY 'StrongPassword123';
+    GRANT ALL PRIVILEGES ON CompanyDB.* TO 'manager'@'localhost';
+
+Step 4: Test and Verify the Setup
+
+    INSERT INTO Employees (FirstName, LastName, Department) 
+    VALUES ('John', 'Doe', 'HR');
+
+    SELECT * FROM Employees;
